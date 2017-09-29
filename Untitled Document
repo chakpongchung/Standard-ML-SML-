@@ -1,0 +1,15 @@
+Write ML expressions that defines findMaxValueLet, which uses compareValue as a nested function
+
+For the rest of today’s exercises, assume a “date” is an SML value of type int*int*int, where the first part is the year, the second part is the month, and the third part is the day. A “reasonable” date has a positive year, a month between 1 and 12, and a day no greater than 31 (or less depending on the month). Your solutions need to work correctly only for reasonable dates, but do not check for reasonable dates. A “day of year” is a number from 1 to 365 where, for example, 33 represents February 2. Ignore leap years.
+
+
+
+Exercise 2
+Write a function is_older that takes two dates and evaluates to true or false. It evaluates to true if the first argument is a date that comes before the second argument. (If the two dates are the same, the result is false.)
+Evaluating a correct solution should generate this binding:
+ 
+val is_older = fn : (int * int * int) * (int * int * int) -> bool
+ 
+Test your code with this expression:
+val test1 = is_older((1,2,3),(2,3,4)) = true
+

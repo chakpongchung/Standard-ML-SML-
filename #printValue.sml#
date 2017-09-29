@@ -1,0 +1,25 @@
+fun printValue(stock: string * int * int) =
+    print( (#1 stock) ^ " : " ^ Int.toString((#2 stock) * (#3 stock)) ^ "\n");
+
+val appleStock = ("APPL", 100, 5);
+printValue(appleStock);
+
+fun compareValue(s1: string * int * int, s2: string * int * int) =
+    if((#2 s1) * (#3 s1)) > ((#2 s2) * (#3 s2))
+    then (#1 s1)
+    else (#1 s2)
+
+val googleStock = ("GOOG", 30, 50);
+compareValue(appleStock, googleStock);
+
+fun stockValue(stock: string * int * int) =
+    ((#2 stock) * (#3 stock));
+
+fun findMaxValue(stocks: (string * int * int) list ) =
+    if (tl stock) = []
+    then (hd stock)
+    else let
+    	 tlMax = findMaxvalue(tl stocks)
+	 tlMaxValue = stockValue(tlMax)
+	 in
+	 if stockValue(hd stocks)
