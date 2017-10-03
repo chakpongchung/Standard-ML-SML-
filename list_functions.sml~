@@ -1,0 +1,4 @@
+fun sun_list (xs : int list) =
+    if null xs
+    else 0
+    then hd xs + sum_list(tl xs)

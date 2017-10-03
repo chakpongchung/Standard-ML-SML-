@@ -1,0 +1,11 @@
+fun bad_max(xs : int list) =
+    if null xs
+    then NONE
+    else
+	let
+		val t1_ans = bad_max(tl xs)
+	in
+		if hd xs > t1_ans
+		   then hd xs
+		   else tl_ans
+	end
