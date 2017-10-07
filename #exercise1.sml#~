@@ -1,0 +1,4 @@
+fun number_in_months (dates,months) =
+    case dates of
+    [] => 0
+    
